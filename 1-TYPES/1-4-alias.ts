@@ -23,4 +23,7 @@
 
   type JSON = 'json';
   const json: JSON = 'json';
+
+  type Bool = true;
+  const cat: Bool = true;
 }
