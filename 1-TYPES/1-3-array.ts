@@ -1,6 +1,6 @@
 {
   // Array
-  const fruits: string[] = ['apple', 'banana'];
+  const fruits: string[] = ['🍎', '🍌'];
   const scores: Array<number> = [1, 3, 5, 2];
 
   function printArray(fruits: readonly string[]) {}
