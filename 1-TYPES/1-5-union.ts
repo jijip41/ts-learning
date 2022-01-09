@@ -34,7 +34,7 @@
 
   type LoginState = SuccessState | FailState;
 
-  function login(): LoginState {
+  function login1(): LoginState {
     return {
       response: {
         body: 'logged in!',
