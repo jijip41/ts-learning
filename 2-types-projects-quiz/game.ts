@@ -8,7 +8,8 @@ const position: Position = {
   x: 0,
   y: 0,
 };
-function move(direction: string): Position {
+// function move(direction: string): Position {
+function move(direction: 'up' | 'down' | 'left' | 'right'): Position {
   switch (direction) {
     case 'up':
       position.y++;
