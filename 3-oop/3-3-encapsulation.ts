@@ -47,3 +47,28 @@
 
   console.log(maker);
 }
+
+{
+  class User {
+    get fullName(): string {
+      return `${this.firstName} ${this.lastName}`;
+    }
+    private internalAge = 4;
+    get age(): number {
+      return this.internalAge;
+    }
+    set age(num: number) {
+      if (num < 0) {
+        throw new Error('Age should not be negative');
+      }
+      this.internalAge = num;
+    }
+    constructor(public firstName: string, private lastName: string) {}
+  }
+  const user = new User('Steve', 'Jobs');
+  console.log(user.fullName);
+  user.firstName = 'Ellie';
+  console.log(user.fullName);
+  user.age = 10;
+  user.age = -1;
+}
