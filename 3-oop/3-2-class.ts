@@ -4,15 +4,15 @@
     hasMilk: boolean;
   };
   class coffeeMachine {
-    BEANS_GRAMS_PER_SHOT: number = 7;
-    beansGram: number = 0;
+    static BEANS_GRAMS_PER_SHOT: number = 7; // class level
+    beansGram: number = 0; // instance (object) level
 
     constructor(beansGram: number) {
       this.beansGram = beansGram;
     }
 
     makeCoffee(shots: number): CoffeeCup {
-      let consumedBeans = shots * this.BEANS_GRAMS_PER_SHOT;
+      let consumedBeans = shots * coffeeMachine.BEANS_GRAMS_PER_SHOT;
       if (this.beansGram < consumedBeans) {
         throw new Error('Not enough coffee beans!');
       }
